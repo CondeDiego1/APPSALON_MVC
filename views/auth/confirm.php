@@ -6,10 +6,10 @@
             <p class="<?php echo $key; ?>"><?php echo ($mensaje) ?></p>
         <?php endforeach;
     endforeach;
-    // echo "<script>
-    // function login(){
-    //     location.href= '/login';
-    // }
-    // setTimeout(login, 10000);
-    // </script>";
+    echo "<script>
+    function login(){
+        location.href= '/login';
+    }
+    setTimeout(login, 10000);
+    </script>";
 }
