@@ -6,7 +6,7 @@
     <title>App BarberShop</title>
     <link rel="stylesheet" href="/build/css/app.css">
     <meta name="description" content="Página web de Salon de Belleza">
-    <link rel="icon" type="image/png" href="../public/build/img/icono.png" />
+    <link rel="icon" type="image/png" href="../build/img/icono.png" />
 </head>
 <body onpaste="return false">
     <div class="contenedor-login"></div>
