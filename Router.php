@@ -22,10 +22,9 @@ class Router
         //$currentUrl = $_SERVER['REQUEST_URI'] === ''? '/' : $_SERVER['REQUEST_URI'];
         if ($_SERVER['PATH_INFO']) {
             $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-         } else {
+        } else {
             $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
-         }
-        // Debuguear( $_GET['token']);
+        }
 
         $method = $_SERVER['REQUEST_METHOD'];
         $rutas_protegidas = ['/create_account', '/recover','/forgot', '/message', '/login'];
