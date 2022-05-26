@@ -67,7 +67,6 @@ class Router
         } else if(in_array($view, $rutas_normales) && $view != "paginas/index"){
             include __DIR__ . "/views/layout2.php";
         } else{
-            include __DIR__ . "/views/layout.php";
             echo($contenido);
         }
     }
