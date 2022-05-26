@@ -145,9 +145,9 @@ class LoginController{
 
     public static function Confirm(Router $router){
         $errores = [];
-        Debuguear($_GET);
         $t = $_GET['token'] ?? 0;
         $token = Sanitizar($t);
+        // Debuguear($_GET);
         $usuarios = Usuario::ConsultaParametro('token', $token);
 
         if(empty($usuarios)) {

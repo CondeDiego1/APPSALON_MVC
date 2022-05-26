@@ -20,6 +20,8 @@ class Router
         $auth = $_SESSION['login'] ?? null;
         //Cambio PATH_INFO por REQUEST_URI, por que el primero es de forma local
         $currentUrl = $_SERVER['REQUEST_URI'] === ''? '/' : $_SERVER['REQUEST_URI'];
+        // Debuguear( $_GET['token']);
+
         $method = $_SERVER['REQUEST_METHOD'];
         $rutas_protegidas = ['/create_account', '/recover','/forgot', '/message', '/login'];
         $rutas_no_admin = ['/perfil', '/editarperfil','/cita', '/reservas'];
