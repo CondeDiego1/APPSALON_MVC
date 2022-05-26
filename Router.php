@@ -19,7 +19,12 @@ class Router
         session_start();
         $auth = $_SESSION['login'] ?? null;
         //Cambio PATH_INFO por REQUEST_URI, por que el primero es de forma local
-        $currentUrl = $_SERVER['REQUEST_URI'] === ''? '/' : $_SERVER['REQUEST_URI'];
+        //$currentUrl = $_SERVER['REQUEST_URI'] === ''? '/' : $_SERVER['REQUEST_URI'];
+        if ($_SERVER['PATH_INFO']) {
+            $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+         } else {
+            $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+         }
         // Debuguear( $_GET['token']);
 
         $method = $_SERVER['REQUEST_METHOD'];
