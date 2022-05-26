@@ -85,7 +85,7 @@ class Email{
             <h2>¡Gracias por registrarte!</h2>
             <p>Por favor confirma tu correo electrónico para que puedas comenzar a disfrutar de todos los servicios de
                 BarberShop</p>
-            <a href='http://localhost:4000/confirm?token=" . $this->token . "'><button>Verificar</button></a>
+            <a href='https://enigmatic-coast-02693.herokuapp.com/confirm?token=" . $this->token . "'><button>Verificar</button></a>
             <p>Si tú no te registraste en BarberShop, por favor ignora este correo electrónico.</p>
             <div><p></p></div>
             <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
@@ -162,8 +162,8 @@ class Email{
             <h1>BarberShop</h1>
             <h2>¡Hola, ". $this->nombre ."!</h2>
             <p> Recientemente has solicitado restablecer tu contraseña, por favor sigue el proceso como se te indica. En caso de que no hayas sido tu quien solicito reestablecer, por favor haz caso omiso a este mensaje</p>
-            <a href='http://localhost:4000/recover?token=" . $this->token . "'><button>Cambiar contraseña</button></a>
-            <p> Si el boton de cambiar contraseña no funciona por favor copia y pega el siguiente enlace en tu navegador http://localhost:4000/recover?token=" . $this->token . "</p>
+            <a href='https://enigmatic-coast-02693.herokuapp.com/recover?token=" . $this->token . "'><button>Cambiar contraseña</button></a>
+            <p> Si el boton de cambiar contraseña no funciona por favor copia y pega el siguiente enlace en tu navegador https://enigmatic-coast-02693.herokuapp.com/recover?token=" . $this->token . "</p>
             <div><p></p></div>
             <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
         </body>
