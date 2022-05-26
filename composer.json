@@ -1,0 +1,25 @@
+{
+    "name": "diegoconde/appsalon",
+    "description": "Proyecto PHP 8, MVC, SQL, SASS, Gulp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Model\\" : "./models",
+            "Controllers\\" : "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Conde",
+            "email": "diegoalejandrocondelopez@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7",
+        "phpmailer/phpmailer": "^6.6",
+        "instasent/instasent-php-lib": "^0.1.4",
+        "twilio/sdk": "^6.37",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
