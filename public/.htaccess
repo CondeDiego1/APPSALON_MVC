@@ -6,6 +6,5 @@
     RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ /$1 [QSA,NC,PT,L]
-    RewriteRule ^perros/([0-9]+)[/]?([^.]+)$ confirm?post_id=$1&$2&%{QUERY_STRING} [NC,L]
+    RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 </IfModule>
