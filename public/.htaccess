@@ -3,9 +3,9 @@
 </IfModule>
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
+    <!-- RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
-
+    RewriteCond %{REQUEST_FILENAME} !-f -->
+    RewriteCond %{QUERY_STRING} !=""
+    RewriteRule ^/(.*) /$1\%3F%{QUERY_STRING}? [noescape,last,redirect]
 </IfModule>
