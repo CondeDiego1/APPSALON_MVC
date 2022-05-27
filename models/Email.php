@@ -20,14 +20,15 @@ class Email{
     }
 
     public function Enviar_Confirmacion(){
-        $mail = new PHPMailer();
         try {
+            $mail = new PHPMailer();
             $mail->isSMTP();
-            $mail->Host = "smtp-relay.gmail";
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
             $mail->Port = 465;
             $mail->Username = 'app.barbershop.co@gmail.com';
-            $mail->Password = 'giglvoenqqprlosj';
+            $mail->Password = 'Barber20Shop22.1';
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
 
             $mail->setFrom('app.barbershop.co@gmail.com');
