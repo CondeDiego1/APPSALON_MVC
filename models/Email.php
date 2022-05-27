@@ -26,7 +26,7 @@ class Email{
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
             $mail->Port = 465;
-            $mail->Username = 'https://enigmatic-coast-02693.herokuapp.com';
+            $mail->Username = 'app.barbershop.co@gmail.com';
             $mail->Password = 'giglvoenqqprlosj';
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
 
@@ -95,11 +95,16 @@ class Email{
             </body>
             </html>";
 
-            $mail->send();
-            echo 'Message has been sent';
+            if (!$mail->send()) {
+                throw new Exception($mail->ErrorInfo);
+            }
+         
+            Flasher::success(sprintf('Mensaje enviado con éxito a %s', $para));
+            Redirect::back();
+         
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-            echo $e;
+            Flasher::error($e->getMessage());
+            Redirect::back();
         }
     }
 
