@@ -99,12 +99,7 @@ class Email{
                 throw new Exception($mail->ErrorInfo);
             }
          
-            Flasher::success(sprintf('Mensaje enviado con éxito a %s', $para));
-            Redirect::back();
-         
         } catch (Exception $e) {
-            Flasher::error($e->getMessage());
-            Redirect::back();
         }
     }
 
