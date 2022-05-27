@@ -20,15 +20,15 @@ class Email{
     public function Enviar_Confirmacion(){
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = "smtp.mailtrap.io";
+        $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '010606a6227c92';
-        $mail->Password = '26cb141bdbd4a0';
+        $mail->Port = 465;
+        $mail->Username = 'app.barbershop.co@gmail.com';
+        $mail->Password = 'giglvoenqqprlosj';
         $mail->SMTPSecure = 'tls'; //Encriptado, seguro
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'BarberShop.com');
+        $mail->setFrom('app.barbershop.co@gmail.com');
+        $mail->addAddress($this->email, 'enigmatic-coast-02693.herokuapp.com');
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
         $mail->Subject = 'Confirmar cuenta';
