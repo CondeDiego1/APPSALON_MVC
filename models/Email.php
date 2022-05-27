@@ -27,13 +27,13 @@ class Email{
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = 'app.barbershop.co@gmail.com';
-            $mail->Password = 'lnqgchncbzorsdol';
+            $mail->Username = "app.barbershop.co@gmail.com";
+            $mail->Password = "lnqgchncbzorsdol";
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
-            $mail->Port = 465;
+            $mail->Port = 587;
 
-            $mail->setFrom('app.barbershop.co@gmail.com');
-            $mail->addAddress($this->email);
+            $mail->setFrom("app.barbershop.co@gmail.com");
+            $mail->addAddress('diegoalejandrocondelopez@gmail.com');//$this->email
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
             $mail->Subject = 'Confirmar cuenta';
