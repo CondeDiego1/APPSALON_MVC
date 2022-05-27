@@ -21,15 +21,16 @@ class Email{
 
     public function Enviar_Confirmacion(){
         try {
-            $mail = new PHPMailer();
-            $mail->isSMTP();
+            $mail = new PHPMailer(true);
             $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->Mailer = "smtp";
+            $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Port = 465;
             $mail->Username = 'app.barbershop.co@gmail.com';
             $mail->Password = 'Barber20Shop22.1';
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
+            $mail->Port = 465;
 
             $mail->setFrom('app.barbershop.co@gmail.com');
             $mail->addAddress($this->email);
@@ -96,11 +97,10 @@ class Email{
             </body>
             </html>";
 
-            if (!$mail->send()) {
-                throw new Exception($mail->ErrorInfo);
-            }
-         
+            $mail->send();
+
         } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
 
