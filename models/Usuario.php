@@ -84,9 +84,9 @@ class Usuario extends ActiveRecord{
             self::$alertas['error'][] = "El usuario es muy corto";
         }
 
-        if (preg_match('\s',$this->usuario)) {
-            self::$alertas['error'][] = "El usuario no puede contener espacios en blanco";
-        }
+        // if (preg_match('\s',$this->usuario)) {
+        //     self::$alertas['error'][] = "El usuario no puede contener espacios en blanco";
+        // }
 
         if(!is_numeric($this->telefono)){
             self ::$alertas['error'][] = 'El teléfono no es válido';

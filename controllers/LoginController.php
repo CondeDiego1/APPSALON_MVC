@@ -127,6 +127,7 @@ class LoginController{
                     if($usuarios->Insertar()){
                         $email = new Email($usuarios->email, $usuarios->nombre, $usuarios->token);//Enviar email
                         $email->Enviar_Confirmacion();
+                        // Debuguear($email);
                         header('Location: /message');
                     }
                 }
