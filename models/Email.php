@@ -21,14 +21,14 @@ class Email{
 
     public function Enviar_Confirmacion(){
         try {
-            $mail = new PHPMailer(true);
+            $mail = new PHPMailer();
             $mail->SMTPDebug = SMTP::DEBUG_OFF;
             $mail->Mailer = "smtp";
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
             $mail->Username = 'app.barbershop.co@gmail.com';
-            $mail->Password = 'Barber20Shop22.1';
+            $mail->Password = 'lnqgchncbzorsdol';
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
             $mail->Port = 465;
 
