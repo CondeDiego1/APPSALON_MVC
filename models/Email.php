@@ -23,7 +23,7 @@ class Email{
         $mail = new PHPMailer();
         try {
             $mail->isSMTP();
-            $mail->Host = "smtp.gmail.com";
+            $mail->Host = "smtp-relay.gmail";
             $mail->SMTPAuth = true;
             $mail->Port = 465;
             $mail->Username = 'app.barbershop.co@gmail.com';
