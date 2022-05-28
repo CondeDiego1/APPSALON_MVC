@@ -17,6 +17,7 @@ class APIController{
     public static function guardar(){
         $cita = new Cita($_POST);
         $resultado = $cita->Crear_();
+        Debuguear($resultado);
 
         if($resultado){
             $sms = new SMS($cita->usuario,$cita->fecha, $cita->hora, $cita->total);

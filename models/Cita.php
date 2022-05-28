@@ -12,7 +12,7 @@ class Cita extends ActiveRecord{
     public $total;
 
     public function __construct (array $args = []){
-        $this->idCita = $args['idCita'] ?? NULL;
+        $this->idCita = $args['idCita'] ?? 0;
         $this->fecha = $args['fecha'] ?? '';
         $this->hora = $args['hora'] ?? '';
         $this->usuario = $args['usuario'] ?? '';
