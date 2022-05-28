@@ -300,7 +300,7 @@
                     <p>Medellín, Colombia</p>
                     <p>0123456789</p>
                     <p>barbershop@gmail.com</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.74073834631!2d-75.65125211985116!3d6.244198821316636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1650747286040!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe  title="Ubicación BarberShop" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.74073834631!2d-75.65125211985116!3d6.244198821316636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1650747286040!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div>
                     <h3 class="margin-top">Escríbenos</h3>
