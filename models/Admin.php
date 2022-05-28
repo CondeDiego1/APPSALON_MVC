@@ -95,16 +95,16 @@ class Admin extends ActiveRecord {
         $ganancias = "SELECT TRUNCATE((SUM(total) / (SELECT SUM(total) AS TOTAL FROM citas) * 100),1) AS TOTALES FROM citas WHERE MONTH(fecha) = (SELECT MONTH(DATE_ADD(CURDATE(),INTERVAL -1 MONTH)))";
 
 
-        $resultado1 = static::preparadas($ganancias_mes);
-        $resultado2 = static::preparadas($citas_mes);
-        $resultado3 = static::preparadas($servicio_preferido);
-        $resultado4 = static::preparadas($ganancias_totales);
-        $resultado5 = static::preparadas($cantidad_servicios);
-        $resultado6 = static::preparadas($cantidad_usuarios);
-        $resultado7 = static::preparadas($cantidad_citas);
-        $resultado8 = static::preparadas($citas_año);
-        $resultado9 = static::preparadas($ganancias_año);
-        $resultado10 = static::preparadas($ganancias);
+        $resultado1 = static::preparadas($ganancias_mes) ?? 0;
+        $resultado2 = static::preparadas($citas_mes) ?? 0;
+        $resultado3 = static::preparadas($servicio_preferido) ?? '';
+        $resultado4 = static::preparadas($ganancias_totales) ?? 0;
+        $resultado5 = static::preparadas($cantidad_servicios) ?? 0;
+        $resultado6 = static::preparadas($cantidad_usuarios) ?? 0;
+        $resultado7 = static::preparadas($cantidad_citas) ?? 0;
+        $resultado8 = static::preparadas($citas_año) ?? 0;
+        $resultado9 = static::preparadas($ganancias_año) ?? 0;
+        $resultado10 = static::preparadas($ganancias) ?? 0;
         
         $objeto = (object)[$resultado1,$resultado2,$resultado3,$resultado4,$resultado5,$resultado6,$resultado7,$resultado8,$resultado9,$resultado10];
         return $objeto;
