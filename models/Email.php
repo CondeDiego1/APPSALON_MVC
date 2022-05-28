@@ -64,7 +64,7 @@ class Email{
                 padding: 0.7em 2em;
                 font-size: 16px !important;
                 font-weight: 500;
-                background: #000000;
+                background-color: #000000;
                 color: #ffffff;
                 border: none;
                 text-transform: uppercase;
