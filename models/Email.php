@@ -33,7 +33,7 @@ class Email{
             $mail->Port = 587;
 
             $mail->setFrom("app.barbershop.co@gmail.com");
-            $mail->addAddress('diegoalejandrocondelopez@gmail.com');//$this->email
+            $mail->addAddress($this->email);//$this->email
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
             $mail->Subject = 'Confirmar cuenta';

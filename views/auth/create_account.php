@@ -37,7 +37,7 @@
                 </div>
             </fieldset>
             <div class="contenedor-boton">
-                <button class="btn-fecla" type="submit">
+                <button class="btn-fecla" type="submit" id="crear">
                     <span>Crear</span>
                     <svg width="34" height="34" viewBox="0 0 74 74" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
@@ -86,5 +86,11 @@
             control.src = "/build/img/visible48.png";
         }
     }
+
+    let button = document.getElementById("crear");
+    button.addEventListener("click", function () {
+        button.disabled = true; 
+        setTimeout(button.disabled = false, 10000);
+    });
 </script>
 
