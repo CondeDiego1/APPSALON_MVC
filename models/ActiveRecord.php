@@ -126,7 +126,6 @@ class ActiveRecord {
         $query .= join("', '", array_values($atributos));
         $query .= "') ";
         
-        Debuguear($query);
         // if(static::$tabla == 'servicios'){
         //     $celda;
         // } else if (static::$tabla == 'usuarios'){
