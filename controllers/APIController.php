@@ -15,9 +15,9 @@ class APIController{
     }
 
     public static function guardar(){
+        isAuth();
         $cita = new Cita($_POST);
         $resultado = $cita->Crear_();
-        Debuguear($resultado);
 
         if($resultado){
             $sms = new SMS($cita->usuario,$cita->fecha, $cita->hora, $cita->total);
@@ -41,6 +41,7 @@ class APIController{
     }
 
     public static function eliminar(){
+        isAuth();
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $cita = Cita::Find('idCita', $_POST['id']);
             $cita->Eliminar("DELETE FROM citas WHERE idCita = '" . $cita->idCita . "'");
