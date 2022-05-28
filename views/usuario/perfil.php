@@ -60,9 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" action="/perfil">
                 <button>
                     <h3>Salir</h3>
-                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                    <lord-icon src="https://cdn.lordicon.com/lywgqtim.json" trigger="loop"
-                        colors="primary:#000000,secondary:#000000" style="width:130px;height:130px">
+                    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                    <lord-icon src="https://cdn.lordicon.com/moscwhoj.json" trigger="loop"
+                        colors="primary:#ffffff,secondary:#ffffff"
+                        style="width:130px;height:130px">
                     </lord-icon>
                 </button>
             </form>
