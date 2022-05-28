@@ -87,10 +87,10 @@
         }
     }
 
-    let button = document.getElementById("crear");
-    button.addEventListener("click", function () {
-        button.disabled = true; 
-        setTimeout(button.disabled = false, 10000);
-    });
+    // let button = document.getElementById("crear");
+    // button.addEventListener("click", function () {
+    //     button.disabled = true; 
+    //     setTimeout(button.disabled = false, 10000);
+    // });
 </script>
 

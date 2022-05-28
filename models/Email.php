@@ -51,6 +51,7 @@ class Email{
                 font-family: 'Poppins', sans-serif;
                 background-color: #ffffff;
                 max-width: 400px;
+                width: 400px;
                 margin: 0 auto;
                 padding: 20px;
             }
@@ -60,13 +61,6 @@ class Email{
             }
         
             a {
-                position: relative;
-                z-index: 0;
-                display: inline-block;
-                margin: 20px 0;
-            }
-        
-            a button {
                 padding: 0.7em 2em;
                 font-size: 16px !important;
                 font-weight: 500;
@@ -75,11 +69,16 @@ class Email{
                 border: none;
                 text-transform: uppercase;
                 cursor: pointer;
+                text-decoration: none;
+                margin: 15px 0;
+                display: inline-block;
             }
+        
             p span {
                 font-size: 12px;
             }
-            div p{
+        
+            div p {
                 border-bottom: 1px solid #000000;
                 border-top: none;
                 margin-top: 40px;
@@ -90,7 +89,7 @@ class Email{
                 <h2>¡Gracias por registrarte!</h2>
                 <p>Por favor confirma tu correo electrónico para que puedas comenzar a disfrutar de todos los servicios de
                     BarberShop</p>
-                <a href='https://enigmatic-coast-02693.herokuapp.com/confirm?token=" . $this->token . "'><button>Verificar</button></a>
+                <a href='https://enigmatic-coast-02693.herokuapp.com/confirm?token=" . $this->token . "'>Verificar</a>
                 <p>Si tú no te registraste en BarberShop, por favor ignora este correo electrónico.</p>
                 <div><p></p></div>
                 <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
