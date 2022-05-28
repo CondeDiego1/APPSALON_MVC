@@ -10,7 +10,7 @@
 </head>
 <body class="contenedor-admin">
     <header class="header-admin">
-        <a href="index.php">
+        <a href="/">
             <h1 class="negro">BarberShop</h1>
         </a>
         <form method="GET" action="/logout">
