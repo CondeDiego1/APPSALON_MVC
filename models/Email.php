@@ -47,10 +47,10 @@ class Email{
                 <h1>BarberShop</h1>
                 <h2 font-size='25px' font-weight='500' line-height='25px'>¡Gracias por registrarte!</h2>
                 <p style='line-height:18px;'>Por favor confirma tu correo electrónico para que puedas comenzar a disfrutar de todos los servicios de BarberShop</p>
-                <a style='position: relative; z-index: 0; display: inline-block; margin: 20px 0;' href='https://enigmatic-coast-02693.herokuapp.com/confirm?token=" . $this->token . "'><button style='padding: 10px 20px; font-size: 16px; font-weight: 500; background-color: #000000; color: #ffffff; border: none; text-transform: uppercase; cursor: pointer;'>Verificar</button></a>
+                <a style='position: relative; z-index: 0; display: inline-block; margin: 0;' href='https://enigmatic-coast-02693.herokuapp.com/confirm?token=" . $this->token . "'><button style='padding: 10px 20px; font-size: 16px; font-weight: 500; background-color: #000000; color: #ffffff; border: none; text-transform: uppercase; cursor: pointer;'>Verificar</button></a>
                 <p style='line-height:18px;'>Si tú no te registraste en BarberShop, por favor ignora este correo electrónico.</p>
                 <div>
-                    <p style='border-bottom: 1px solid #000000; border-top: none; margin-top: 40px;'></p>
+                    <p style='border-bottom: 1px solid #000000; border-top: none; margin-top: 25px;'></p>
                 </div>
                 <p style='line-height:18px;'><span font-size='12px'>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
             </body>
