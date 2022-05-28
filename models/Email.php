@@ -61,8 +61,7 @@ class Email{
             }
         
             a {
-                padding: 0.7em 2em;
-                font-size: 16px !important;
+                padding: 10px 20px;
                 font-weight: 500;
                 background-color: #000000;
                 color: #ffffff;
