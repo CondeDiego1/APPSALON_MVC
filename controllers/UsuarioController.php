@@ -52,7 +52,6 @@ class usuarioController {
     }
 
     public static function eliminar(Router $router){
-        // Debuguear($_SESSION);
         $resultado_eliminar = true;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){

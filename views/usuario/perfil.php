@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         async function eliminacion () {
             try {
-                const url = 'http://localhost:4000/eliminar';
+                const url = 'https://barbershopco.herokuapp.com/eliminar';
                 const respuesta = await fetch(url, {
                     method: 'POST',
                     body: '',
