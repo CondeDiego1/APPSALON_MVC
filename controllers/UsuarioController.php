@@ -14,6 +14,7 @@ class usuarioController {
     }
 
     public static function editar(Router $router){
+        isAuth();
         $usuarios = Usuario::ConsultaParametro('usuario', $_SESSION['usuario']);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -52,6 +53,7 @@ class usuarioController {
     }
 
     public static function eliminar(Router $router){
+        isAuth();
         $resultado_eliminar = true;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -75,6 +77,7 @@ class usuarioController {
     }
 
     public static function eliminacion () {
+        isAuth();
         $usuarios = new Usuario;
         $resultado = $usuarios->eliminarUsuario($_SESSION['usuario']);
         if($resultado){
