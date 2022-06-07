@@ -23,12 +23,14 @@ function autenticado() {
 
 
 function isAuth() : void {
+    session_start();
     if (!isset($_SESSION['login'])) {
         header('Location: /login');
     }
 }
 
 function isAdmin() : void {
+    session_start();
     if (!isset($_SESSION['admin'])) {
         header('Location: /login');
     }
