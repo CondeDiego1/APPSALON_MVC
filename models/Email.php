@@ -25,14 +25,14 @@ class Email{
             $mail->SMTPDebug = SMTP::DEBUG_OFF;
             $mail->Mailer = "smtp";
             $mail->isSMTP();
-            $mail->Host = "smtp.gmail.com";
+            $mail->Host = $_ENV['MAIL_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = "app.barbershop.co@gmail.com";
-            $mail->Password = "lnqgchncbzorsdol";
+            $mail->Username = $_ENV['MAIL_USER'];
+            $mail->Password = $_ENV['MAIL_PASSWORD'];
             $mail->SMTPSecure = 'tls'; //Encriptado, seguro
-            $mail->Port = 587;
+            $mail->Port = $_ENV['MAIL_PORT'];
 
-            $mail->setFrom("app.barbershop.co@gmail.com");
+            $mail->setFrom($_ENV['MAIL_USER']);
             $mail->addAddress($this->email);//$this->email
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
@@ -68,14 +68,14 @@ class Email{
         $mail->SMTPDebug = SMTP::DEBUG_OFF;
         $mail->Mailer = "smtp";
         $mail->isSMTP();
-        $mail->Host = "smtp.gmail.com";
+        $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = "app.barbershop.co@gmail.com";
-        $mail->Password = "lnqgchncbzorsdol";
+        $mail->Username = $_ENV['MAIL_USER'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];
         $mail->SMTPSecure = 'tls'; //Encriptado, seguro
-        $mail->Port = 587;
+        $mail->Port = $_ENV['MAIL_PORT'];
 
-        $mail->setFrom("app.barbershop.co@gmail.com");
+        $mail->setFrom($_ENV['MAIL_USER']);
         $mail->addAddress($this->email);//$this->email
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
