@@ -16,9 +16,8 @@ class Router
     }
 
     public function comprobarRutas() {
-        // session_start();
-        // $auth = $_SESSION['login'] ?? null;
-        isAuth();
+        session_start();
+        $auth = $_SESSION['login'] ?? null;
         //Cambio PATH_INFO por REQUEST_URI, por que el primero es de forma local
         //$currentUrl = $_SERVER['REQUEST_URI'] === ''? '/' : $_SERVER['REQUEST_URI'];
         if ($_SERVER['PATH_INFO']) {
