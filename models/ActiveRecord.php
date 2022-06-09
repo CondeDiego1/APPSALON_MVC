@@ -184,7 +184,7 @@ class ActiveRecord {
 
     //Usuario
     public static function todasReservas (string $usuario) {
-        $query = "SELECT s.nombre, c.fecha, c.hora, s.precio FROM citasServicios cs INNER JOIN citas c ON cs.idCita = c.idCita INNER JOIN servicios s ON cs.idServicio = s.id INNER JOIN usuarios u ON c.usuario = u.usuario WHERE u.usuario = '${usuario}'";
+        $query = "SELECT s.nombre, c.fecha, c.hora, s.precio FROM citasservicios cs INNER JOIN citas c ON cs.idCita = c.idCita INNER JOIN servicios s ON cs.idServicio = s.id INNER JOIN usuarios u ON c.usuario = u.usuario WHERE u.usuario = '${usuario}'";
 
         $resultado = mysqli_query(self::$db, $query);
         $array = [];

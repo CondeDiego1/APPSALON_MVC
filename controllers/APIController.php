@@ -15,6 +15,7 @@ class APIController{
     }
 
     public static function guardar(){
+        isAuth();
         $cita = new Cita($_POST);
         $resultado = $cita->Crear_();
 
