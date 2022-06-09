@@ -132,7 +132,7 @@ class ActiveRecord {
         //     $id = $this->usuario;
         if (static::$tabla == 'citas') {
             $celda = 'idCita';
-        } else if (static::$tabla == 'citasServicios' || static::$tabla == 'servicios'){
+        } else if (static::$tabla == 'citasservicios' || static::$tabla == 'servicios'){
             $celda = 'id';
         }
         // return json_encode(['query' => $query]); //Ver la respuesta Fecth que estamos ejecutando

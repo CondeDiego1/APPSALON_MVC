@@ -15,14 +15,14 @@ class APIController{
     }
 
     public static function guardar(){
-        isAuth();
+        // isAuth();
         $cita = new Cita($_POST);
         $resultado = $cita->Crear_();
 
-        if($resultado){
-            $sms = new SMS($cita->usuario,$cita->fecha, $cita->hora, $cita->total);
-            $sms->Enviar_reserva();
-        }
+        // if($resultado){
+        //     $sms = new SMS($cita->usuario,$cita->fecha, $cita->hora, $cita->total);
+        //     $sms->Enviar_reserva();
+        // }
 
         $id = $resultado['idCita'];
 
@@ -34,6 +34,7 @@ class APIController{
                 'idServicio' => $idServicio
             ];
             $citaServicio = new CitaServicio($args);
+            // Debuguear($args);
             $citaServicio = $citaServicio->Crear_();
         }
 
