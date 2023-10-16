@@ -165,9 +165,11 @@ class LoginController{
         ]);
     }
 
-    public static function logout() {
-        session_start();
-        $_SESSION = [];
-        header('Location: /login');
+    public static function logout(){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            session_start(); 
+            $_SESSION = []; 
+            header('Location: /');
+        }
     }
 }

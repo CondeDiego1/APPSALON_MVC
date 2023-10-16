@@ -30,7 +30,7 @@
                     <label data-cy="vercontraseña" onclick="myFunction()" for="vercontraseña"><img id="control" src="" alt="imagen login"></label>
                 </div>
                 <div class="validaciones-contraseña no-margin">
-                    <p class="ps">La contraseña debe ser mayor a 10 dígitos y debe contener una mayúscula, una minuscula, un número.</p>
+                    <p class="ps">La contraseña debe ser mayor a 10 dígitos y debe contener una mayúscula, una minuscula y un número.</p>
                 </div>
             </fieldset>
             <div class="paginacion">

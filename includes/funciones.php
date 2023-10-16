@@ -23,14 +23,14 @@ function autenticado() {
 
 
 function isAuth() : void {
-    // session_start();
+    isSession();
     if (!isset($_SESSION['login'])) {
         header('Location: /login');
     }
 }
 
 function isAdmin() : void {
-    session_start();
+    isSession();
     if (!isset($_SESSION['admin'])) {
         header('Location: /login');
     }
@@ -44,7 +44,7 @@ function CerrarSesion(){
 
 function fecha($fecha){
     $date = date_create($fecha); 
-    return date_format($date, "d.m.Y");
+    return date_format($date, "d/m/Y");
 }
 
 function hora($hora){
@@ -64,4 +64,11 @@ function crear_Array($lista){
 
     $array = array_values(array_unique($array));
     return $array;
+}
+
+function isSession()
+{
+    if (session_status() == PHP_SESSION_NONE) {
+        return session_start();
+    }
 }

@@ -13,8 +13,8 @@
         <a href="/">
             <h1 class="negro">BarberShop</h1>
         </a>
-        <form method="GET" action="/logout">
-            <button class="no-style">Cerrar Sesión</button>
+        <form method="POST" novalidate autocomplete="off" action="logout">
+            <input class="no-style" type="submit" value="Cerrar Sesión"> 
         </form>
     </header>
     

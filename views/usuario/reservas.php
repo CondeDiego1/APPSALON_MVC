@@ -30,8 +30,8 @@
                     <?php foreach ($resultado as $resul){ ?>
                         <tr>
                             <td><?php echo($resul['nombre']); ?></td>
-                            <td><?php $date = date_create($resul['fecha']); echo(date_format($date, "d.m.Y")); ?></td>
-                            <td><?php $date = date_create($resul['hora']); if($resul['hora'] > 12){$horari = "p.m.";} else {$horari = "a.m.";} echo(date_format($date, "h:i") ." ".$horari); ?></td>
+                            <td><?php echo(fecha($resul['fecha'])); ?></td>
+                            <td><?php echo(hora($resul['hora'])); ?></td>
                             <td><?php echo ("$" . number_format(intval($resul['precio']), 0, ",", ".")); ?></td>
                         </tr>
                     <?php } ?>
